@@ -1,17 +1,5 @@
 body {
-    font-family: 'Times New Roman', 'SimSun', Helvetica, Arial, sans-serif;
-}
-
-h1 {
-    text-align: center;
-    font-size: 48px;
-    margin-top: 50px;
-}
-
-p {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 20px;
+    font-family: 'Times New Roman', 'NSimSun', Helvetica, Arial, sans-serif;
 }
 
 .background {
@@ -36,16 +24,59 @@ p {
 }
 
 .main {
+    padding: 200px 0;
     display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
     align-items: center;
-    height: 500px;
+    justify-content: center;
 }
 
-.circular-image {
+.main img {
     width: 100px;
     height: 100px;
+    border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    border-radius: 50%;
+}
+
+.main-my-name {
+    font-size: 48px;
+    margin-top: 20px;
+    text-align: center;
+    color: #FFCDD2;
+}
+
+.main-my-data {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: azure;
+}
+
+.main-icon {
+    color: azure;
+    font-size: 20px;
+    margin-top: 10px;
+    font-style: normal;
+    display: block;
+}
+
+a:link {
+    text-decoration: none;
+    color: azure;
+}
+
+a:visited {
+    text-decoration: none;
+    color: azure;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
 }
