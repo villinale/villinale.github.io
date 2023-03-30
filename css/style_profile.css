@@ -1,0 +1,132 @@
+body {
+    font-family: 'Times New Roman', 'NSimSun', Helvetica, Arial, sans-serif;
+    display: block;
+    height: 99%;
+    width: 100%;
+    margin: 0 0 0 0;
+    background-color: rgb(248, 248, 248);
+}
+
+.top {
+    left: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.top-img {
+    width: 100%;
+    height: 100%;
+    min-width: 200px;
+    overflow: hidden;
+}
+
+.top-p {
+    position: relative;
+    width: max-content;
+    color: rgb(240, 255, 255, 0.8);
+    margin-top: -20px;
+    z-index: 2;
+    text-align: left;
+    font-size: 10px;
+    left: 5px;
+}
+
+.main {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.leftbar {
+    margin: 0 auto;
+    text-align: center;
+    width: 21%;
+    min-width: 150px;
+    height: 100%;
+    background-color: rgb(255, 205, 210, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 2%;
+}
+
+.leftbar-img {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+
+.leftbar-my-name {
+    font-size: 35px;
+    margin-top: 20px;
+    text-align: center;
+    color: #384C9D;
+}
+
+.leftbar-my-data {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    color: #6477BA;
+}
+
+.leftbar-icon {
+    font-size: 15px;
+    margin-top: 8px;
+    font-style: normal;
+    display: block;
+    color: #6477BA;
+}
+
+.leftbar-my-github-link {
+    text-decoration: none;
+    color: #6477BA;
+}
+
+.leftbar-my-github-link:link {
+    text-decoration: none;
+    color: #6477BA;
+}
+
+.leftbar-my-github-link:visited {
+    text-decoration: none;
+    color: #6477BA;
+}
+
+.leftbar-my-github-link:hover {
+    text-decoration: underline;
+}
+
+.leftbar-my-github-link:active {
+    text-decoration: underline;
+}
+
+.rightbar {
+    position: relative;
+    margin: 10 auto;
+    width: 70%;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+.bottom {
+    margin-top: 50px;
+    position: relative;
+    height: 80px;
+    width: 100%;
+    background-color: #6477BA;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
+    color: aliceblue;
+}
