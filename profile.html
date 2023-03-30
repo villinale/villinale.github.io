@@ -2,7 +2,7 @@
  * @Author: yingxin wang
  * @Date: 2023-03-27 20:58:27
  * @LastEditors: yingxin wang
- * @LastEditTime: 2023-03-30 15:23:21
+ * @LastEditTime: 2023-03-30 20:49:47
  * @Description: 简历页面设计
 -->
 <!DOCTYPE html>
@@ -16,59 +16,102 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
     <link rel="stylesheet" href="css/style_profile.css" type="text/css" />
-
-    <script src="js/script.js"></script>
 </head>
 
 <body>
-    <div id="top" class="top">
-        <img class="top-img" src="img/bgimg.png" />
-        <p class="top-p"> a photo in The Sims4</p>
-    </div>
+    <header id="header">
+        <img class="header-img" src="img/bgimg.png" />
+        <i class="bi bi-chevron-down header-icon"></i>
+        <span class="header-p"> a photo in The Sims4</span>
+    </header>
 
-    <div id="main" class="main">
-        <div class="leftbar">
+    <main id="main">
+        <div id="leftbar" class="leftbar">
             <div>
                 <img class="leftbar-img" src="https://github.com/villinale.png?size=200" alt="img From GitHub" />
             </div>
             <div>
-                <a class="leftbar-my-name">villinale</a>
+                <a class="leftbar-my-name" href="index.html">xxx</a>
                 <div class="leftbar-my-data">
-                    <i class="bi bi-geo-alt leftbar-icon"> 同济大学</i>
+                    <i class="bi bi-geo-alt leftbar-icon"> xx大学</i>
                     <i class="bi bi-github leftbar-icon">
                         <a class="leftbar-my-github-link" href="https://github.com/villinale">villinale</a>
                     </i>
-                    <i class="bi bi-tencent-qq leftbar-icon"> 905466445</i>
-                    <i class="bi bi-envelope leftbar-icon"> 905466445@qq.com</i>
+                    <i class="bi bi-telephone leftbar-icon"> 12345678910</i>
+                    <i class="bi bi-tencent-qq leftbar-icon"> 12345678910</i>
+                    <i class="bi bi-envelope leftbar-icon"> 12345678910@qq.com</i>
                 </div>
             </div>
         </div>
         <div class="rightbar">
+            <div class="rightbar-data">
+                <div>
+                    <h1 id="h11">教育经历</h1>
+                    <p><strong>xxxx-xxxx xx大学 xx系</strong></p>
+                    <p>GPA：xxx/xxx</p>
+                    <p>奖项技能：xxxx、xxxx</p>
+                    <p>相关课程：xxxx、xxxx</p>
+                </div>
+                <div>
+                    <h1 id="h12">工作经历</h1>
+                    <p><strong>xxxx-xxxx xxxx xxxxx</strong></p>
+                    <p>技术内容：……</p>
+                    <p><strong>xxxx-xxxx xxxx xxxxx</strong></p>
+                    <p>技术内容：……</p>
+                </div>
+                <div>
+                    <h1 id="h13">项目经历</h1>
+                    <p><strong>xxxx-xxxx xxxx xxxxx</strong></p>
+                    <p>技术内容：……</p>
+                    <p><strong>xxxx-xxxx xxxx xxxxx</strong></p>
+                    <p>技术内容：……</p>
+                </div>
+                <div>
+                    <h1 id="h14">技能证书</h1>
+                    <p>熟悉语言：xxx、xxx</p>
+                    <p>办公软件：xxx、xxx</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 
-    <div class="bottom">
+    <footer>
         <p>@2023-2023 villinale<br>
             为啥叫这个名字我也忘记了</p>
-    </div>
+    </footer>
 
-
-    <!-- AniJS core library -->
-    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script>
-    <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
     <!--simpleParallax Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script>
-        var image = document.getElementsByClassName('top-img');
+        var image = document.getElementsByClassName('header-img');
         new simpleParallax(image, {
             orientation: 'left',
             delay: .6,
             transition: 'cubic-bezier(0,0,0,1)'
         });
     </script>
-    <!-- barba.js Scripts -->
-    <script src="https://unpkg.com/@barba/core"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <!-- Rough Notation Scripts -->
+    <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+    <script type="module">
+        import { annotate, annotationGroup } from 'https://unpkg.com/rough-notation?module';
+        setTimeout(function () {
+            const n1 = document.querySelector('#h11');
+            const a1 = annotate(n1, { type: 'highlight', color: 'rgb(255, 205, 210)' });
+
+            const n2 = document.querySelector('#h12');
+            const a2 = annotate(n2, { type: 'highlight', color: 'rgb(255, 205, 210)' });
+
+            const n3 = document.querySelector('#h13');
+            const a3 = annotate(n3, { type: 'highlight', color: 'rgb(255, 205, 210)' });
+
+
+            const n4 = document.querySelector('#h14');
+            const a4 = annotate(n4, { type: 'highlight', color: 'rgb(255, 205, 210)' });
+
+            const ag = annotationGroup([a1, a2, a3, a4]);
+            ag.show();
+        }, 2000);
+    </script>
 </body>
 
 </html>
